@@ -1,0 +1,50 @@
+@import 'bootstrap.scss';
+@import 'variables';
+
+ 
+
+html {
+  width: 100%;
+}
+@font-face {
+    font-family: 'alternategothic2_btregular';
+    src: url('/fonts/alternate-webfont.eot');
+    src: url('/fonts/alternate-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/alternate-webfont.woff2') format('woff2'),
+         url('/fonts/alternate-webfont.woff') format('woff'),
+         url('/fonts/alternate-webfont.ttf') format('truetype'),
+         url('/fonts/alternate-webfont.svg#alternategothic2_btregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body { 
+  width: 100%;
+	font-family:$text-font;
+	color:#000;
+	font-size:16px;
+	line-height:22px;
+}
+
+@import 'bootstrap-select';
+@import 'nav'; 
+@import 'weather'; 
+@import 'general';
+@import 'home';
+@import 'amenities';
+@import 'eat';
+@import 'groups';
+@import 'rooms';
+@import 'specials';
+@import 'common';
+@import 'contact';
+@import 'explore';
+@import 'blog';
+@import 'gallery';
+@import 'jquery-ui';
+@import 'datepicker';
+@import 'booking-widget';
+@import 'thankyou';
+@import 'owl-carousel';
+@import 'fury';
+@import 'blog-list';

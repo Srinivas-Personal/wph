@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<body id="specials-page" ng-app="rezTrip" rt3-hotel-info="hotelInfo" ng-cloak>
+     
+	<div  class="m-left"> 
+  
+    <!-- special wrap start-->
+    <section class="special-wrap clearfix" ng-controller='specialController'> 
+      <div  class="special-box"  style="max-height:760px;" ng-repeat='special in offering.special_rates'>
+        <div class="special-contaienr">
+          <div class="special-image"><img ng-src="[[special.lead_photo_url.large]]" class="img-responsive" /> </div>
+          <div class="special-content special-content1">
+            <div class="v-parent">
+              <div class="v-child">
+              	<div class="w-55 text-left">
+                <p  class="m-hide"><a class="button-outline"  ng-href= "/special/#[[special.rate_plan_name | spaceDash]]"><span>LEARN MORE</span></a></p>
+                <a ng-href= "/special/#[[special.rate_plan_name | spaceDash]]"><h2>[[special.rate_plan_name]]</h2></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="special-contaienr-hover" > 
+          <div class="special-content">
+          <div class="v-parent">
+            <div class="v-child">
+            	<div class="w-55 text-left">
+              <h3 >[[special.rate_plan_name]]</h3>
+              <p>[[special.long_description]]</p>
+              <p>Valid for stays on: All days of the week</p>
+              <p  ><a class="button-outline" ng-href= "/special/#[[special.rate_plan_name | spaceDash]]"><span>LEARN MORE</span></a></p>
+              <!--<p><a href="#" class="share-btn"><span>Share +</span></a></p>-->
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
+      </div>
+    </section>
+    <!-- special wrap end--> 
+
+  {% include footer.html %} 
+</div>

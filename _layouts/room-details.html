@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<body id="amenities-page" ng-app="rezTrip" data-room-id="{{page.roomCode}}" rt3-rooms-browser="browser" rt3-room-details="selectedRoom" ng-cloak>
+<div  class="m-left">
+  <div id="hero">
+    <div class='hero-content'> </div>
+  </div>
+
+  <div class='amenities-container' >
+    <div class="amenities-wrap">
+      <div class="container">
+        <h1 class="text-center">[[ selectedRoom.name ]]</h1>
+        <p class="rd-tonight-price"><a ng-href="https://wphsouthbeach.reztrip.com/search?selected_room_category=[[selectedRoom.category]]&selected_room=[[ selectedRoom.code ]]" target="_blank">Tonight’s Rate <span>[[ selectedRoom.todayRate ]]</span></a></p>
+        <div class="w-55 text-center">
+        	<p>[[ selectedRoom.description ]]</p>
+            <div class="room-btn-holder" ><a ng-href="https://wphsouthbeach.reztrip.com/search?selected_room_category=[[selectedRoom.category]]&selected_room=[[ selectedRoom.code ]]" class="btn-empty btn-fill" target="_blank"><span>Book Now</span></a></div>
+
+        </div>
+        <p><img ng-src="[[ selectedRoom.photos[0].large ]]" alt="The Pool" class="img-responsive rd-image"></p>
+        <div class="w-55 text-center rd-sub">
+        	<h2>Amenities</h2>
+        	<ul>
+                <li ng-repeat="list in selectedRoom.amenities">[[ list ]]</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="special-carousel">
+  <div class="w-90">
+  <h2 class="ng-binding">Other Rooms</h2>
+   <div class="owl-carousel" id="carousel-rooms">
+      <div ng-repeat="room in browser.roomsList" class="item">
+       <a href="/rooms/[[room.name | lowercase | nospace | spacetohyphen]].html"> <img class="lazyOwl" ng-src="[[room.photos[0].yankee_large]]" alt=""></a>
+        <h4>[[room.name]]</h4>
+        <a class="readon-s" href="/rooms/[[room.name | lowercase | nospace | spacetohyphen]].html">LEARN MORE</a>
+      </div>
+    </div>
+   </div>
+  </div>
+  
+  
+    
+    {% include footer.html %} </div>
+</div>

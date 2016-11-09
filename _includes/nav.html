@@ -1,0 +1,36 @@
+
+<nav class="navbar  navbar-fixed-top mainnav">
+  <div class="navbar-header"> <a class="navbar-brand" href="/"> 
+    <!--<span class="logo">WPH</span>--> 
+    <img src="/assets/images/wph-logo2x.png" alt="wph"/> 
+    <!--<span  class="caption"></span>--> 
+    </a>
+    <div  class="top-booknow-button"> <a href="" show-booking-widget class="btn-empty btn-fill"> <span>Reserve Now</span> </a> </div>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" 
+            aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <!--<li> 
+          <a href="#" show-booking-widget {% if page.slug == "reserve" %} class="active"{% endif %}>{% t nav.reserve %}</a>
+        </li>-->
+      <li> <a href="{{ '/rooms' | permalink }}"  {% if page.slug == "rooms" %} class="active"{% endif %}>{% t nav.rooms %}</a> </li>
+      <li> <a href="{{ '/amenities' | permalink }}" {% if page.slug == "amenities" %} class="active"{% endif %}>{% t nav.amenities %}</a> </li>
+      <li> <a href="{{ '/specials' | permalink }}"  {% if page.slug == "specials" %} class="active"{% endif %}> {% t nav.specials %}</a> </li>
+      <li> <a href="{{ '/eat' | permalink }}" {% if page.slug == "eat" %} class="active"{% endif %}>{% t nav.eat %}</a> </li>
+      <li> <a href="{{ '/groups' | permalink }}" {% if page.slug == "groups" %} class="active"{% endif %}>{% t nav.groups %}</a> </li>
+      <li> <a href="{{ '/explore' | permalink }}"  {% if page.slug == "explore" %} class="active"{% endif %}> {% t nav.explore %}</a> </li>
+      <li> <a href="{{ '/gallery' | permalink }}" {% if page.slug == "gallery" %} class="active"{% endif %}>{% t nav.gallery %}</a> </li>
+      <li> <a href="{{ '/blog' | permalink }}" {% if page.slug == "blog" %} class="active"{% endif %}>{% t nav.blog %}</a> </li>
+      <li> <a href="{{ '/contact' | permalink }}" {% if page.slug == "contact" %} class="active"{% endif %}>{% t nav.contact %}</a> </li>
+    </ul>
+  </div>
+  <!--/.nav-collapse --> 
+</nav>
+
+{% if page.page-name == 'home' %}
+<div class="cnt-logo"><img src="/assets/images/conde-nast-logo.png" alt=""/>
+	<p><strong>Best Hotels in Miami:</strong><br>Readers’ Choice Award</p>
+</div>
+{% endif %}
+

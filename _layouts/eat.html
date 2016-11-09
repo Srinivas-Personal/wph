@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<body id="eat-page"  ng-app="rezTrip" rt3-hotel-info="hotelInfo" ng-cloak>
+<div  class="m-left">
+<div id="hero">
+    <div class='hero-content'> 								
+		</div>
+  </div>
+	 
+    <div class='eat-container'>  
+     <div class="eat-top-wrap">
+        <div class="container">
+          <div class="w-55">
+          <div class="flag"><img src="../assets/images/flag.svg" alt=""/><span>Opening December 2016</span></div>
+          {% region top %} 
+          <p>  <a href="#eat" class="button-outline anchorlink"> <span>Eat</span> </a>
+          <a href="#drink" class="button-outline anchorlink"> <span>Drink</span> </a></p>
+          </div>  
+        </div>
+     </div>         
+  	<div class="eat-content-wrap">
+    <a  id="eat" class="anchor"></a>
+	  <div class="eat-wrap eat-wrap2"> 
+    	<div class="w-90">
+     	<div class="container">
+      	<div class="row">
+         <div class="col-lg-8 col-md-7 col-sm-5 text-center">
+              {% region eat1-image %}  
+          </div>
+           <div class="col-lg-4 col-md-5 col-sm-7">   
+              {% region eat1 %}  
+            </div>
+          </div>
+        </div>
+      </div> 
+       
+      
+  	</div>
+     
+    <a  id="drink" class="anchor"></a>
+     <div class="eat-wrap eat-wrap2 drink-wrap" > 
+    	<div class="w-90">
+     	<div class="container">
+      	<div class="row"> 
+           <div class="col-lg-5 col-md-6 col-sm-7">   
+           
+              {% region drink1 %}  
+            </div>
+      		<div class="col-lg-6 col-md-6 col-sm-5 col-lg-push-1  text-center">
+              {% region drink1-image %}  
+          </div>
+          </div>
+        </div>
+      </div>  
+  	</div>
+     
+		{% include footer.html %} 
+	
+  	</div> 
+  </div>
+</div>

@@ -1,0 +1,23 @@
+#furybark{ position:fixed; bottom:80px; left:40px; z-index:99;
+		@media (max-width: $screen-sm-min) {  
+			display:none; 
+		}
+		.paw-icon{ height:40px; width:40px;
+			&:hover{ cursor:pointer;}
+			img{ width:100%;}
+		}
+		.popover{ width:300px; border-radius:0px; border:#000 solid 2px; background: url(https://d31f902anbz5po.cloudfront.net/957/55748_1_master.jpg) no-repeat; background-size: cover;
+			.arrow{border-right-color: #000; background:none;
+				&:after{ border-right-color:transparent;}
+			}
+			h2{ color:#fff; font-size:24px;margin: 15px 5px 0px; padding:0px; line-height:26px;}
+			p{ color:#fff; font-size:16px; font-family: "freight-sans-pro",sans-serif; font-style: normal; font-weight: 400;margin: 0px 5px 10px;}
+			a{margin: 0 5px 10px;}
+		}
+		.popover-content{background: rgba(0,0,0,0.3);}
+	}
+#amenities-page, #blog-page, #eat-page{
+		.paw-icon{ height:40px; width:40px; 
+			.svg path{fill:#fff;}
+		}
+	}

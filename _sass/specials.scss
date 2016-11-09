@@ -1,0 +1,10 @@
+#specials-page  {    
+ background: url(/assets/images/bg-texture.jpg);
+ @media (max-width: $screen-xs-max) { 
+	  padding-top:120px;
+	}
+	.special-wrap {
+		padding:0px;
+	}
+}
+ 

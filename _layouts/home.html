@@ -1,0 +1,216 @@
+---
+layout: default
+---
+<body id="home-page"  ng-app="rezTrip" rt3-rooms-browser="browser" rt3-hotel-info="hotelInfo" ng-cloak>
+<div id="home" class="m-left">
+  <div id="hero" class="scrl">
+    <div class='hero-content'>
+    	<div class="scroll-down" id="downClick">Let's Explore<br><img src="../assets/images/down_arrow.svg" alt=""/></div>
+	</div>
+  </div>
+  <div class="home-container ">
+
+    <!-- Room wrap start -->
+    <section class="rooms-wrap">
+      <div class="container">
+        <div class="row row-table">
+          <div class="col-lg-7 col-md-7 col-sm-12  col-table">
+            <div class="room-image-contaienr">
+              <div class="title  ">
+                <div class="v-parent">
+                  <div class="v-child">
+                    <h1>THE NEW BREED OF SOUTH BEACH BOUTIQUE Hotels</h1>
+                  </div>
+                </div>
+              </div>
+              <img src="assets/images/home-room1.jpg" class="img-responsive m-hide" /> </div>
+          </div>
+          <div class="col-lg-5 col-md-5 col-sm-12 col-table">
+            <div class="w-90 txt-left "> {% region home_room1 %} </div>
+          </div>
+        </div>
+        <div class="row row-table m-hide room-wrap2">
+          <div class="col-lg-5 col-md-5 col-sm-12 col-table">
+            <div class="w-90 txt-right "> {% region home_room2 %} </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-12  col-table">
+            <div class="room-image-contaienr">
+              <div class="title">
+                <div class="v-parent">
+                  <div class="v-child">
+                    <h2>YOUR PLAYGROUND: <br>
+                    OCEAN DRIVE &amp; THE BEACH</h2>
+                  </div>
+                </div>
+              </div>
+              <img src="assets/images/home-room2.jpg" class="img-responsive m-hide" /> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Room wrap end -->
+
+    <!-- Soul wrap -->
+    <section class="soul-wrap">
+      <div class="w-85">
+        <div class="container ">
+          <div class="row">
+            <div class="col-sm-3">
+              <h2 >SOUL IN<br>THE HEART <br>OF SOUTH <br>BEACH.
+            </div>
+            <div class="col-sm-4">
+              {% region home_soul1 %}
+            </div>
+            <div class="col-sm-5">  <div class="w-90"> {% region home_soul2 %} </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soul wrap end-->
+    <!-- Twitter wrap start-->
+    <section class="twitter-wrap m-hide">
+      <div class="container ">
+      <div id="twitfeed">
+        <script type="text/javascript">(function(){var ticker=document.createElement('script');ticker.type='text/javascript';ticker.async=true;ticker.src='//twitcker.com/ticker/wphsouthbeach.js?speed=6&count=8&open=true&background=eaeee6&tweet=000&container=own-container&own-container=twitfeed';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ticker);})();</script>
+      </div>
+    </section>
+    <!-- Twitter wrap start-->
+
+    <!-- Instagram wrap start-->
+    <section class="instagram-wrapper m-hide">
+      <div class="container">
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/eb13257357075ee5a3207fa10d1e7819.html" id="lightwidget_eb13257357" name="lightwidget_eb13257357"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+		<p class="instagram-content">OUR HOTEL <i class="instagram"></i> YOUR VISION</p>
+      </div>
+    </section>
+    <!-- Instagram wrap end-->
+    <!-- special wrap start-->
+    <section class="special-wrap clearfix" ng-controller='specialController'>
+      <h2 class="special-title">SPECIAL OFFERS</h2>
+      <!--<div class="special-box">
+        <div class="special-contaienr">
+          <div class="special-image"><img src="assets/images/home-special1.jpg" class="img-responsive" /> </div>
+          <div class="special-content special-content1">
+            <div class="v-parent">
+              <div class="v-child">
+              	<div class="w-55 text-left">
+                <p><a class="button" href= "https://wphsouthbeach.reztrip.com/en/special_offer?rate_code=ADV">BOOK NOW</a></p>
+                <h2>ADVANCE PURCHASE RATE</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="special-contaienr-hover" >
+          <div class="special-content">
+          <div class="v-parent">
+            <div class="v-child">
+            	<div class="w-55 text-left">
+              <h3 >ADVANCE PURCHASE RATE</h3>
+              <p>When booking 7 days or more in advance enjoy 20% off of our Best Available Rate! Reservations must be prepaid in full at the time of booking and are non-refundable.</p>
+              <p>Valid for stays on: All days of the week</p>
+              <p><a class="button-outline" href= "https://wphsouthbeach.reztrip.com/en/special_offer?rate_code=ADV"><span>BOOK NOW</span></a></p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+      <!--<div class="special-box">
+        <div class="special-contaienr">
+          <div class="special-image"><img src="assets/images/home-special2.jpg" class="img-responsive" /> </div>
+          <div class="special-content special-content1">
+            <div class="v-parent">
+              <div class="v-child">
+              	<div class="w-55 text-left">
+                <p><a class="button" href= "https://wphsouthbeach.reztrip.com/en/special_offer?rate_code=FLR">BOOK NOW</a></p>
+                <h2>FLORIDA RESIDENTS SUMMER ESCAPE</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="special-contaienr-hover" >
+          <div class="special-content">
+          <div class="v-parent">
+            <div class="v-child">
+            	<div class="w-55 text-left">
+              <h3>FLORIDA RESIDENTS SUMMER ESCAPE</h3>
+              <p>Enjoy paradise in your backyard - our Florida Residents Summer Escape includes daily valet parking, continental breakfast and nightly cocktail hour. Valid Florida ID must be presented upon check-in.</p>
+              <p>Valid for stays on: All days of the week</p>
+              <p><a class="button-outline" href= "https://wphsouthbeach.reztrip.com/en/special_offer?rate_code=FLR"><span class="hvr-sweep-to-right">BOOK NOW</span></a></p>
+
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+      <div  class="special-box">
+        <div class="special-contaienr">
+          <div class="special-image"><img ng-src="[[offering.special_rates[0].lead_photo_url.large]]" class="img-responsive" /> </div>
+          <div class="special-content special-content1">
+            <div class="v-parent">
+              <div class="v-child">
+              	<div class="w-55 text-left">
+                <p  class="m-hide"><a class="button-outline"  ng-href= "/special/#[[offering.special_rates[0].rate_plan_name | spaceDash]]"><span>LEARN MORE</span></a></p>
+                <a ng-href= "/special/#[[offering.special_rates[0].rate_plan_name | spaceDash]]"><h2>[[offering.special_rates[0].rate_plan_name]]</h2></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="special-contaienr-hover" >
+          <div class="special-content">
+          <div class="v-parent">
+            <div class="v-child">
+            	<div class="w-55 text-left">
+              <h3 >[[offering.special_rates[0].rate_plan_name]]</h3>
+              <p>[[offering.special_rates[0].long_description]]</p>
+              <p>Valid for stays on: All days of the week</p>
+              <p  ><a class="button-outline" ng-href= "/special/#[[offering.special_rates[0].rate_plan_name | spaceDash]]"><span>LEARN MORE</span></a></p>
+              <!--<p><a href="#" class="share-btn"><span>Share +</span></a></p>-->
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="special-box">
+        <div class="special-contaienr">
+          <div class="special-image"><img ng-src="[[offering.special_rates[1].lead_photo_url.large]]" class="img-responsive" /> </div>
+          <div class="special-content special-content1">
+            <div class="v-parent">
+              <div class="v-child">
+              	<div class="w-55 text-left">
+                <p  class="m-hide"><a class="button-outline"  ng-href= "/special/#[[offering.special_rates[1].rate_plan_name | spaceDash]]"><span>LEARN MORE</span></a></p>
+                <a ng-href= "/special/#[[offering.special_rates[1].rate_plan_name | spaceDash]]"><h2>[[offering.special_rates[1].rate_plan_name]]</h2></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="special-contaienr-hover" >
+          <div class="special-content">
+          <div class="v-parent">
+            <div class="v-child">
+            	<div class="w-55 text-left">
+              <h3 >[[offering.special_rates[1].rate_plan_name]]</h3>
+              <p>[[offering.special_rates[1].long_description]]</p>
+              <p>Valid for stays on: All days of the week</p>
+              <p  ><a class="button-outline" ng-href= "/special/#[[offering.special_rates[1].rate_plan_name | spaceDash]]"><span>LEARN MORE</span></a></p>
+              <!--<p><a href="#" class="share-btn"><span>Share +</span></a></p>-->
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!--<p><a href="#" class="share-btn"><span>Share +</span></a></p>-->
+    </section>
+    <!-- special wrap end-->
+
+{% include footer.html %}
+  </div>
+</div>

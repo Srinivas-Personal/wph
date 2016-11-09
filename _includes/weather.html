@@ -1,0 +1,129 @@
+<style>
+@font-face {
+    font-family: 'weather';
+    src: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('//s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('//s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  
+
+#weather {
+		font-size:34px;
+		width:100px;
+}
+
+i { 
+  font-family: weather;
+  font-size:  50px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+  text-transform: none;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+ 
+
+#weather .currently {
+  margin: 0 20px;
+}
+</style>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+<script> 
+
+// v3.1.0
+//Docs at http://simpleweatherjs.com
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'MIAMI BEACH, FL',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<div>'+weather.temp+'&deg;'+weather.units.temp+' <i class="icon-'+weather.code+'"></i></div>';  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+ +'</p>');
+    }
+  });
+});
+</script>
+
+<div id="weather" class="weather-wrap"></div>
+<!--
+<div class="weather-wrap"><span>
+  <div id="plemx-root"></div>
+  <script type="text/javascript"> 
+
+  var _plm = _plm || [];
+  _plm.push(['_btn', 22343]); 
+  _plm.push(['_loc','usfl0316']);
+  _plm.push(['location', document.location.host ]);
+
+  (function(d,e,i) {
+  if (d.getElementById(i)) return;
+  var px = d.createElement(e);
+  px.type = 'text/javascript';
+  px.async = true;
+  px.id = i;
+  px.src = ('https:' == d.location.protocol ? 'https:' : 'http:') + '//widget.twnmm.com/js/btn/pelm.js?orig=en_ca';
+  var s = d.getElementsByTagName('script')[0];
+
+
+  s.parentNode.insertBefore(px, s); 
+})(document, 'script', 'plmxbtn');</script> 
+  </span><span></span></div>
+-->

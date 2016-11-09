@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<body id="amenities-page"  ng-app="rezTrip" rt3-hotel-info="hotelInfo" rt3-rooms-browser="browser" ng-cloak>
+<div  class="m-left">
+  <div id="hero">
+    <div class='hero-content'> </div>
+  </div>
+  <div class='amenities-container'>
+    <div class="amenities-wrap">
+      <div class="container">
+        <h1 class="text-center">THE POOL</h1>
+        <div class="w-55 text-center"> {% region pool %} </div>
+        <p>{% region pool-image %} </p>
+        <div class="w-55 text-center"> {% region pool1 %} </div>
+      </div>
+    </div>
+    <div class="amenities-wrap amenities-wrap2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-7  text-center">
+            <div class="w-85"> {% region tuktuk-image %} </div>
+          </div>
+          <div class="col-md-6 col-sm-5">
+            <div class="w-90"> {% region tuktuk %} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="amenities-wrap amenities-wrap2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-7">
+            <div class="w-85">
+              <h2>MARTONE CYCLING BIKES</h2>
+              {% region bicycle %} </div>
+          </div>
+          <div class="col-md-6 col-sm-5 text-center"> {% region bicycle-image %} </div>
+        </div>
+      </div>
+    </div>
+    <div class="amenities-wrap amenities-wrap2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-7  text-center">
+            <div class="w-85"> {% region beekman-image %} </div>
+          </div>
+          <div class="col-md-6 col-sm-5">
+            <div class="w-90"> {% region beekman %} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %} </div>
+</div>

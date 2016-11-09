@@ -1,0 +1,68 @@
+<div id="furybark">
+	<div class='paw-icon' data-popover="true" data-html=true data-content="<h2>Furry Bark Package</h2><p>We're Pet Friendly!</p><a class='button-outline' target='blank' href='http://www.wphsouthbeach.com/special/#Furry-Bark-Package'><span>LEARN MORE</span></a>"><img class="svg" src="/assets/images/paws.svg" alt=""/></div>
+</div>
+<script>
+	//$(window).load(function(){
+		//$('body, .popover').popover({   
+//		   selector: '[data-toggle=popover]',
+//		   container: 'body',
+//		   trigger: 'hover',
+//		   html:'true'
+//		 });
+		 var originalLeave = $.fn.popover.Constructor.prototype.leave;
+		$.fn.popover.Constructor.prototype.leave = function(obj){
+		  var self = obj instanceof this.constructor ?
+			obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
+		  var container, timeout;
+		
+		  originalLeave.call(this, obj);
+		
+		  if(obj.currentTarget) {
+			container = $(obj.currentTarget).siblings('.popover')
+			timeout = self.timeout;
+			container.one('mouseenter', function(){
+			  //We entered the actual popover – call off the dogs
+			  clearTimeout(timeout);
+			  //Let's monitor popover content instead
+			  container.one('mouseleave', function(){
+				$.fn.popover.Constructor.prototype.leave.call(self, self);
+			  });
+			})
+		  }
+		};
+	
+	
+		$('body').popover({ selector: '[data-popover]', trigger: 'click hover', placement: 'right', delay: {show: 50, hide: 400}});
+		
+		$('img.svg').each(function(){
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Add replaced image's ID to the new SVG
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                // Remove any invalid XML tags as per http://validator.w3.org
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Replace image with new SVG
+                $img.replaceWith($svg);
+
+            }, 'xml');
+
+        });
+	
+		//});
+//	
+</script>

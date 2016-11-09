@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<body id="blog-list-page" ng-app="rezTrip" rt3-hotel-info="hotelInfo" ng-cloak>
+     
+	<div  class="m-left">
+    	<section class="blog-more-wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+       	  <div class="blog-more">
+          	
+            	<div class="blog-image-holder">
+                {% assign foundImage = 0 %}
+                    {% assign images = page.content | split:"<img " %}
+                    {% for image in images %}
+                      {% if image contains 'src' %}
+                
+                          {% if foundImage == 0 %}
+                              {% assign html = image | split:"/>" | first %}
+                              {% assign tags = html | split:" " %}
+                              {% for tag in tags %}
+                                {% if tag contains 'src' %}
+                                  <img {{ tag }} />
+                                {% endif %}
+                              {% endfor %}
+                              {% assign foundImage = 1 %}
+                          {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="blog-text">
+              	<h1 itemprop="name headline">{{page.title}}</h1>
+                <div class="blog-content">
+                <div class="post-date-label">{{ page.date | date: "%B %-d, %Y" }}</div>
+            	<div itemprop="articleBody">{{ content }}</div>
+              </div>
+              </div>
+            </div>
+        </section>
+    	</div>
+  {% include footer.html %} 

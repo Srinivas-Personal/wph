@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<body id="blog-list-page" ng-app="rezTrip" rt3-hotel-info="hotelInfo" ng-cloak>
+     
+	<div  class="m-left"> 
+    
+    
+    <section class="blog-wrapper">
+    {% for post in paginator.posts %}
+    <div class="blog-post">
+    	
+    	<div class="col-md-8 -left">
+        	<div class="blog-image-holder">
+       	    	{% assign foundImage = 0 %}
+                    {% assign images = post.content | split:"<img " %}
+                    {% for image in images %}
+                      {% if image contains 'src' %}
+                
+                          {% if foundImage == 0 %}
+                              {% assign html = image | split:"/>" | first %}
+                              {% assign tags = html | split:" " %}
+                              {% for tag in tags %}
+                                {% if tag contains 'src' %}
+                                  <img {{ tag }} />
+                                {% endif %}
+                              {% endfor %}
+                              {% assign foundImage = 1 %}
+                          {% endif %}
+                      {% endif %}
+                    {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 -right">
+       	  <div class="right-content">
+            	<h2><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h2>
+                {{ post.excerpt }}
+              <a href="{{ post.url | prepend: site.baseurl }}" class="blog-arrow"><img src="/assets/images/blog-arrow.png" alt=""/></a>
+               <!--<div class="share-btn-holder"><a href="#" class="share-btn"><span>Share +</span></a></div>-->
+            </div>
+        </div>
+      
+        </div>
+          {% endfor %} 
+        
+   
+   
+   
+        <div class="pagination"> 
+ <p><span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span></p>
+<ul class="pagination">
+
+  {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a></li>
+  {% else %}
+    <li><span class="previous">Previous</span></li>
+  {% endif %}
+   
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path }}" class="next">Next</a></li>
+  {% else %}
+    <li><span class="next ">Next</span></li>
+  {% endif %}
+  </ul>
+
+</div>
+          
+        
+    </section>
+  	  
+	</div>
+  {% include footer.html %} 
+

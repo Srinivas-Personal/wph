@@ -1,0 +1,287 @@
+---
+layout: default
+---
+<body id="rooms-page" ng-app="rezTrip"  ng-cloak>
+<div  class="m-left">
+	<!--<div id="hero">
+    <div class='hero-content'>
+		</div>
+  </div>-->
+
+    <div class='amenities-container rooms-container-main no-margin' rt3-rooms-browser="browser"  ng-cloak>
+
+     <div class="rooms-container">
+     <div class="scrollable-theme"><img src="/assets/images/rooms/standard-theme.jpg" alt=""/></div>
+     	<div class="room-category">
+
+        	<h2>Standard</h2>
+            <p class="text-uppercase text-grey">Available with two queen beds or one king bed</p>
+            <p>Human, interactive and social experiences ideal for the single traveler or the Bohemian individual with a sense of adventure. </p>
+            <div class="m-info">
+           	  <div class="m-info-content">
+               	<!--<a href="#" class="share-btn"><span>Share +</span></a>-->
+                	<div class="room-features-wrap">
+                    <ul class="room-features">
+                    	<li>Rainfall Showers</li>
+                        <li>Robes</li>
+                        <li>Slippers</li>
+                        <li>Wi-Fi</li>
+                        <li>Iron/Ironing Board</li>
+                        <li>Air Conditioning</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Desk</li>
+                        <li>Cribs</li>
+                        <li>Pet-Friendly</li>
+                        <li>Connecting Rooms</li>
+                        <li>Smart Plugs</li>
+                        <li>Main Service</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Coffee Maker</li>
+                        <li>Alarm Clock</li>
+                        <li>Flat Screen TVs</li>
+                        <li>Mini Refrigerator</li>
+                    </ul>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="m-info-btn">More Information</a>
+            </div>
+
+        </div>
+        <div class="room-sub-category" >
+       	  <div class="col-sm-6 no-padding lightgallery" ng-repeat ="room in browser.roomsList | filter: {category : 'Standard'}">
+          	<div class="room-left-col"><img ng-src="[[room.photos[0].yankee_large]]" alt=""/></div>
+            <div class="content">
+            <h2>[[room.name]]</h2>
+            <p class="tonight-price">Tonight’s Rate <a ng-href="https://wphsouthbeach.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" target="_blank"><span>[[ room.todayRate ]]</span></a></p>
+            <p class="matter">[[room.short_description]] </p>
+            <div class="room-btn-holder"><!--<a href="" data-src="/assets/images/rooms/rg-standard-1.jpg" class="btn-empty item"><span>View Gallery</span></a> -->
+            <a href="/rooms/[[room.name | lowercase | nospace | spacetohyphen]].html" class="btn-empty btn-fill"> <span>View Room</span></a></div>
+            </div>
+            </div>
+
+
+        </div>
+     </div>
+
+
+
+     <div class="rooms-container lightgallery">
+     <div class="scrollable-theme"><img src="/assets/images/rooms/loft-theme.jpg" alt=""/></div>
+     	<div class="room-category">
+
+        	<h2>Premium</h2>
+           <!-- <p class="tonight-price large">Tonight’s Rate <span>[[ browser.roomRates[4] ]]</span></p>-->
+            <p class="text-uppercase text-grey">Available with  one king bed</p>
+            <p>Take the natural approach and take one step closer into our evolving community with most rooms having views of the courtyard or pool. </p>
+            <div class="m-info">
+           	  <div class="m-info-content">
+               	<!--<a href="#" class="share-btn"><span>Share +</span></a>-->
+                	<div class="room-features-wrap">
+                    <ul class="room-features">
+                    	<li>Rainfall Showers</li>
+                        <li>Robes</li>
+                        <li>Slippers</li>
+                        <li>Wi-Fi</li>
+                        <li>Iron/Ironing Board</li>
+                        <li>Air Conditioning</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Desk</li>
+                        <li>Cribs</li>
+                        <li>Pet-Friendly</li>
+                        <li>Connecting Rooms</li>
+                        <li>Smart Plugs</li>
+                        <li>Main Service</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Coffee Maker</li>
+                        <li>Alarm Clock</li>
+                        <li>Flat Screen TVs</li>
+                        <li>Mini Refrigerator</li>
+                    </ul>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="m-info-btn">More Information</a>
+                <!--<div class="room-btn-holder">
+                <a href="" data-src="/assets/images/rooms/rg-premium-1.jpg" class="btn-empty item"><span>View Gallery</span></a>
+                <a href="https://wphsouthbeach.reztrip.com/search?selected_room_category=Premium&selected_room=PR1K" class="btn-empty btn-fill"><span>Book Now</span></a></div>-->
+            </div>
+
+        </div>
+       <div class="room-sub-category">
+
+
+
+         <div class="col-sm-6 no-padding lightgallery" ng-repeat ="room in browser.roomsList | filter: {category : 'Premium'}">
+           <div class="room-left-col"><img ng-src="[[room.photos[0].yankee_large]]" alt=""/></div>
+           <div class="content">
+           <h2>[[room.name]]</h2>
+           <p class="tonight-price">Tonight’s Rate <a ng-href="https://wphsouthbeach.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" target="_blank"><span>[[ room.todayRate ]]</span></a></p>
+           <p class="matter">[[room.short_description]] </p>
+           <div class="room-btn-holder"><!--<a href="" data-src="/assets/images/rooms/rg-standard-1.jpg" class="btn-empty item"><span>View Gallery</span></a> -->
+           <a href="/rooms/[[room.name | lowercase | nospace  | spacetohyphen]].html" class="btn-empty btn-fill"> <span>View Room</span></a></div>
+           </div>
+           </div>
+
+
+        </div>
+     </div>
+
+     <div class="rooms-container">
+     <div class="scrollable-theme"><img src="/assets/images/rooms/loft-theme.jpg" alt=""/></div>
+     	<div class="room-category">
+
+        	<h2>Premier</h2>
+            <p class="text-uppercase text-grey">Available with two queen beds or one king bed</p>
+            <p>After enjoying the day minutes away on 9th & Ocean Drive basking in pure Miami Beach sunshine, retreat back to our premier top floor room ideal for a group of friends or large families. </p>
+            <div class="m-info">
+           	  <div class="m-info-content">
+               	<!--<a href="#" class="share-btn"><span>Share +</span></a>-->
+                	<div class="room-features-wrap">
+                    <ul class="room-features">
+                    	<li>Rainfall Showers</li>
+                        <li>Robes</li>
+                        <li>Slippers</li>
+                        <li>Wi-Fi</li>
+                        <li>Iron/Ironing Board</li>
+                        <li>Air Conditioning</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Desk</li>
+                        <li>Cribs</li>
+                        <li>Pet-Friendly</li>
+                        <li>Connecting Rooms</li>
+                        <li>Smart Plugs</li>
+                        <li>Main Service</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Coffee Maker</li>
+                        <li>Alarm Clock</li>
+                        <li>Flat Screen TVs</li>
+                        <li>Mini Refrigerator</li>
+                    </ul>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="m-info-btn">More Information</a>
+            </div>
+
+        </div>
+        <div class="room-sub-category">
+          <div class="col-sm-6 no-padding lightgallery" ng-repeat ="room in browser.roomsList | filter: {category : 'Premier'}">
+          	<div class="room-left-col"><img ng-src="[[room.photos[0].yankee_large]]" alt=""/></div>
+            <div class="content">
+            <h2>[[room.name]]</h2>
+            <p class="tonight-price">Tonight’s Rate <a ng-href="https://wphsouthbeach.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" target="_blank"><span>[[ room.todayRate ]]</span></a></p>
+            <p class="matter">[[room.short_description]] </p>
+            <div class="room-btn-holder"><!--<a href="" data-src="/assets/images/rooms/rg-standard-1.jpg" class="btn-empty item"><span>View Gallery</span></a> -->
+            <a href="/rooms/[[room.name | lowercase | nospace | spacetohyphen]].html" class="btn-empty btn-fill"> <span>View Room</span></a></div>
+            </div>
+            </div>
+
+
+        </div>
+     </div>
+
+     <div class="rooms-container">
+     <div class="scrollable-theme"><img ng-src="/assets/images/rooms/loft-theme.jpg" alt=""/></div>
+     	<div class="room-category">
+
+        	<h2>Loft</h2>
+            <p class="text-uppercase text-grey">Available with two queen beds or one king bed</p>
+            <p>The lifestyle is made to be natural and innovative, enjoy the city sky line or a sunrise and/or sunset in our floor to ceiling window lofts. </p>
+            <div class="m-info">
+           	  <div class="m-info-content">
+               	<!--<a href="#" class="share-btn"><span>Share +</span></a>-->
+                	<div class="room-features-wrap">
+                    <ul class="room-features">
+                    	<li>Rainfall Showers</li>
+                        <li>Robes</li>
+                        <li>Slippers</li>
+                        <li>Wi-Fi</li>
+                        <li>Iron/Ironing Board</li>
+                        <li>Air Conditioning</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Desk</li>
+                        <li>Cribs</li>
+                        <li>Pet-Friendly</li>
+                        <li>Connecting Rooms</li>
+                        <li>Smart Plugs</li>
+                        <li>Main Service</li>
+                    </ul>
+                    <ul class="room-features">
+                    	<li>Coffee Maker</li>
+                        <li>Alarm Clock</li>
+                        <li>Flat Screen TVs</li>
+                        <li>Mini Refrigerator</li>
+                    </ul>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="m-info-btn">More Information</a>
+            </div>
+
+        </div>
+        <div class="room-sub-category">
+          <div class="col-sm-6 no-padding lightgallery" ng-repeat ="room in browser.roomsList | filter: {category : 'Loft'}">
+            <div class="room-left-col"><img ng-src="[[room.photos[0].yankee_large]]" alt=""/></div>
+            <div class="content">
+            <h2>[[room.name]]</h2>
+            <p class="tonight-price">Tonight’s Rate <a ng-href="https://wphsouthbeach.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" target="_blank"><span>[[ room.todayRate ]]</span></a></p>
+            <p class="matter">[[room.short_description]] </p>
+            <div class="room-btn-holder"><!--<a href="" data-src="/assets/images/rooms/rg-standard-1.jpg" class="btn-empty item"><span>View Gallery</span></a> -->
+            <a href="/rooms/[[room.name | lowercase | nospace | spacetohyphen]].html" class="btn-empty btn-fill"> <span>View Room</span></a></div>
+            </div>
+            </div>
+
+        </div>
+     </div>
+
+
+
+
+	{% include footer.html %}
+
+  </div>
+</div>
+
+<script>
+
+ $(document).ready(function() {
+   $(".m-info-btn").click(function(){
+	   $(this).parent(".m-info").find(".m-info-content").slideToggle();
+	   $(this).toggleClass("toggle-arrow");
+	   if($(this).text() == "More Information"){
+		   $(this).html("Close Information");
+	   }
+	   else{
+		   $(this).html("More Information");
+	   }
+   });
+});
+
+</script>
+<script>
+// Equal heights for rooms
+$(document).ready(function() {
+var maxHeight = 0;
+
+$(".matter").each(function(){
+   if ($(this).height() > maxHeight) {
+   		maxHeight = $(this).height();
+	}
+});
+
+$(".matter").height(maxHeight);
+});
+</script>
+<script>
+	$(document).ready(function(){
+		$('.lightgallery').lightGallery({
+   		selector: '.item',
+		thumbnail: false,
+		counter: false
+		})
+	});
+</script>

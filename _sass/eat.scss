@@ -1,0 +1,180 @@
+#eat-page  {
+@media (min-width: $screen-sm-min) {   
+	 background:url(/assets/images/eat-bg.jpg) no-repeat 0 0 ;
+	 background-size: cover;
+	 background-attachment: fixed;  
+ }
+  #hero  {
+   .hero-content {
+	 	display:none;
+	 	@media (max-width: $screen-xs-max) {
+	 		display:block;
+			 background-image:url(/assets/images/eat-bg.jpg);
+			 background-color:none;
+	 }
+	}
+}
+ .weather-wrap {
+ 	color:#fff;
+ }
+.mainnav {
+	.navbar-collapse  {
+		.navbar-nav { 
+			li {
+				a { 
+					@media (min-width: $screen-sm-min) {
+						color:$light-color; 
+						text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+						&:hover, &:focus, &.active {
+								color:$heightlite-color; 
+							}
+						} 
+					}
+				}
+			} 
+		}
+	}
+	.temp {
+		color:$light-color !important; 
+	}
+}
+.eat-container  {
+  .eat-top-wrap { 
+		margin-bottom:10px;
+		padding:15px;
+		p {
+			font-weight:600;
+		}
+	 	@media (max-width: $screen-xs-max) {
+		text-align:center; 
+ 		 background: url(/assets/images/bg-texture.jpg);
+	 	}
+		@media (min-width: $screen-sm-min) {
+			padding:30px;
+			color:#fff; 
+		}
+		@media (min-width: $screen-md-min) {
+			padding:80px 0 30px; 
+			.w-55 { 
+				max-width:405px;}
+		}
+		@media (min-width: 1420px) {
+			padding:150px 0 60px;
+		}
+		.button-outline {
+			margin-right:10px;
+			text-transform:uppercase;
+			@media (min-width: $screen-sm-min) {
+				border-color:$light-color;
+				> span { 
+					color:$secondary-color;
+					background-color:$light-color; 
+					background-position: right center;
+					background-repeat:no-repeat;
+					width:120px;
+					position:relative;
+					&:after {
+							content:"";
+						  background: url(/assets/images/downarrow-dark.png) no-repeat;
+							 width: 18px;
+  					  height: 8px;
+						  position: absolute;
+							right: 10px;
+							top: 15px;
+						}
+				}
+				&:hover, &:focus {
+				 border-color:$secondary-color;
+					 > span { 
+						color:$light-color; 
+						 box-shadow: inset 250px 0 0 0 $secondary-color;
+						background-color:$secondary-color;
+						
+						&:after {
+							content:"";
+						  background-image: url(/assets/images/downarrow-light.png);
+						}
+					}
+				}
+			}
+		}
+	}
+	.eat-wrap {
+		background:#e9eae0;
+		margin-bottom:10px;
+		padding:20px 15px 20px;
+		@media (min-width: $screen-sm-min) {
+			padding:30px;
+		}
+	}
+	
+	.eat-wrap { 
+		&.eat-wrap2 {
+		margin-bottom:40px;
+		background:#85bcb4;
+			@media (min-width: $screen-sm-min) {
+				padding:60px 0;  
+		 	} 
+		}
+		
+		&.drink-wrap  {
+		background:#e1959e;
+		}
+		@media (max-width: $screen-xs-max) {
+			text-align:center;
+		}
+		h1, h2 {
+			@media (max-width: $screen-xs-max) {
+				padding-top:20px;
+			}
+			}
+			p, ul {
+				font-size:16px;
+				line-height:26px;
+				@media (min-width: $screen-sm-min) {
+					padding:15px 0;
+					margin:0px;
+				} 
+			}
+			ul {
+				li{
+					display:block;
+					padding-left:30px;
+					position:relative;
+					list-style:none;
+					&:before{
+						position: static;
+						content: "\f111";
+						font-family: FontAwesome;
+						top: 10px; 
+						font-size: 10px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+}
+.eat-content-wrap{
+ 	 background: url(/assets/images/bg-texture.jpg);
+	 .anchor{
+		 @media (max-width: $screen-xs-max) {
+			display: block;
+			height: 140px;  
+			margin-top: -140px; 
+			visibility: hidden;
+		}
+	}
+}
+.flag{
+		    margin-bottom: 22px;
+			font-size: 16px;
+			font-family: "alternategothic2_btregular";
+			text-transform: uppercase;
+			padding: 5px 10px;
+			background: rgba(0, 0, 0, 0.2);
+			display: inline-block;
+			color: #fff;
+		img{ width:24px; height:24px; margin-right:8px;}
+		span{ margin-top:3px; display:inherit;}
+		
+	}

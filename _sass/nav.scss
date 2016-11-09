@@ -1,0 +1,217 @@
+.mainnav { 
+	@media (min-width: $screen-sm-min) {  
+		padding:22px 0 0 22px;
+		width:240px;
+	}
+	.top-booknow-button{
+		position: fixed;
+		right: 70PX;
+		top: 60px;
+		@media (max-width: $screen-sm-min) { 
+			position:inherit;
+			a{ width:112px;
+				span{ height:32px; line-height:28px; font-size:16px;}
+			}
+		}
+		a{border: solid 1px #2db3a2;
+			span{background: #2db3a2;}
+		}
+	}
+	.navbar-header {
+		text-align:center;
+		background:$bg-texture ;
+		@media (min-width: $screen-sm-min) {   
+			text-align:left; 
+			background:none;
+		}
+	
+		.navbar-toggle {
+			float:none;
+			margin:0 auto;
+			.icon-bar{
+				border-size:1px;
+			 	background:$heightlite-color;  
+			}
+			&.collapsed {
+				.icon-bar{ 
+					background:$secondary-color;  
+				}
+			}
+		}
+	}
+	.navbar-brand{
+		height: 92px;
+		display: block;
+		padding: 0px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		float: none;
+		width: 96px;
+		margin: 0 auto;
+		@media (min-width: $screen-sm-min) {    
+			height:200px; width:209px;	   
+		}
+		img{ width:100%;}
+		.logo{
+			background:url(/assets/images/wph-logo.png) no-repeat;
+			background-size:160px 122px;
+			width:160px;
+			height:122px;
+			font-size:0em;
+			display:block;
+			margin:0 auto;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			@media (min-width: $screen-sm-min) {   
+				background-size:cover;
+				width:209px;
+				height:159px;
+				margin:0;
+			}
+			@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+				background:url(/assets/images/wph-logo2x.png) no-repeat;
+				background-size:cover;
+			}
+		}
+		.caption{
+			background:url(/assets/images/logo-caption.png) no-repeat;
+			background-size:204px 11px;
+			width:204px;
+			font-size:0em;
+			height:11px;
+			display:block; 
+			margin:10px  auto 0; 
+			-webkit-transition: height 0.01s;
+			-moz-transition: height 0.01s;
+			transition: height 0.01s;
+			@media (min-width: $screen-sm-min) {   
+			 	margin:10px  0 0; 
+			}
+		 @media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+				background:url(/assets/images/logo-caption2x.png) no-repeat;
+				background-size:204px 11px;
+			}
+		}
+	}
+	.navbar-collapse { 
+			background:$bg-texture ;
+			@media (min-width: $screen-sm-min) {   
+				background:none;
+			} 
+		.navbar-nav { 
+			@media (min-width: $screen-sm-min) {  
+				display:inline-block; 
+			} 
+		} 
+		.navbar-nav { 
+				font-family:$main-font; 
+				@media (min-width: $screen-sm-min) {  
+					float:none;
+					clear:both;
+					width:230px;
+				}
+				li {
+					padding: 0px 0;
+					@media (min-width: $screen-sm-min) {  
+						float:none; 
+						padding:0px;
+					}
+					a {
+						padding:5px 0px;
+						color:$secondary-color; 
+						font-size:24px;
+						line-height:24px;
+						text-align:center;
+						text-transform:uppercase;
+						@media (min-width: $screen-sm-min) {   
+							font-size:44px;
+							line-height:40px; 
+							padding:0px;
+							text-align:left;
+							-webkit-transition: all 0.01s;
+							-moz-transition: all 0.01s;
+							transition: all 0.01s;
+							text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+						}
+						&:hover, &:focus, &.active {
+							color:$heightlite-color;
+							background:none;
+					}
+				}
+			}
+		}	
+	}
+	&.shrink {
+		@media (min-width: $screen-sm-min) { 
+			.navbar-brand{  
+				height:144px; width:154px;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+			.logo{ 
+				background-size:160px 122px; 
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			}
+			.caption{ 
+				display:none;
+			-webkit-transition: height 0.01s;
+			-moz-transition: height 0.01s;
+			transition: height 0.01s;
+			}
+		}
+	.navbar-brand{ 
+		@media (min-width: $screen-sm-min) {   
+			height:144px;
+		}
+	}
+	.navbar-nav { 
+		li { 
+			a { 
+				@media (min-width: $screen-sm-min) {   
+					font-size:34px;
+					line-height:30px;   
+					-webkit-transition: all 0.01s;
+					-moz-transition: all 0.01s;
+					transition: all 0.01s;
+					display:inline-block;
+					}
+				}
+			}
+		}
+	}
+} 
+
+.cnt-logo {
+    position: absolute;
+	z-index:10;
+	display: none;
+	text-align: center;
+		@media (min-width: $screen-sm-min) {
+			width: 130px;
+			right: 33px;
+    		top: 32px;
+			display: block;
+		}
+		@media (min-width: $screen-md-min) {
+			width: 130px;
+			right: 73px;
+			top: 140px;
+		}
+		@media (min-width: $screen-lg-min) { 
+			width: 160px;
+			right: 99px;
+		}
+		img {
+			width: 100%;
+		}
+		p {
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+    		line-height: 18px;
+		}
+}
